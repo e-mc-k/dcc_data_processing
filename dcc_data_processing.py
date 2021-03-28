@@ -13,3 +13,6 @@ balancelinkpath = r"P:\Internal Data\Testing\Quidnet_Deformable_Cell\Data_Reduct
 df_dataq = pd.read_csv(dataqpath, skiprows=(4))
 df_blink = pd.read_csv(balancelinkpath)
 df_blink.columns = ['mass (g)', 'Time']
+
+df_dataq['bob'] = np.where(df_dataq['Volt']<1.12,0,1)
+df_dataq['bob2'] = df_dataq['bob']*3 + 1
