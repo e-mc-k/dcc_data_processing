@@ -9,8 +9,8 @@ import pandas as pd
 import plotly.express as px
 from plotly.offline import plot
 
-dataqpath = r"/Users/Bubba/Documents/Python_Projects/DCC_Processing/210316_PPGSlurry1230pMud_Test16_2p5OBBP.2inP"
-balancelinkpath = r"/Users/Bubba/Documents/Python_Projects/DCC_Processing/210316_PPGSlurry1230pMud_Test16_2p5OBBP_MASS.TXT"
+dataqpath = r"/Users/Bubba/Documents/Python_Projects/DCC_Processing/data/210316_PPGSlurry1230pMud_Test16_2p5OBBP.2inP"
+balancelinkpath = r"/Users/Bubba/Documents/Python_Projects/DCC_Processing/data/210316_PPGSlurry1230pMud_Test16_2p5OBBP_MASS.TXT"
 df_dataq = pd.read_csv(dataqpath, skiprows=(4))
 df_blink = pd.read_csv(balancelinkpath)
 df_blink.columns = ['mass (g)', 'Time']
